@@ -1,0 +1,12 @@
+universe = vanilla
+executable = scripts/run_stab1_full_baseR.sh
+
+log = logs/stab1_full_baseR_$(Cluster).log
+output = logs/stab1_full_baseR_$(Cluster).out
+error = logs/stab1_full_baseR_$(Cluster).err
+
+request_cpus = 1
+request_memory = 8GB
+request_disk = 20GB
+
+queue

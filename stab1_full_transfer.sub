@@ -1,0 +1,20 @@
+universe = vanilla
+
+• initialdir = ./
+executable = scripts/run_stab1_full_transfer.sh
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files = scripts/stab1_baseR_full_survival_stage_condor.R, data/EB++AdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.xena.gz, data/Survival_SupplementalTable_S1_20171025_xena_sp
+transfer_output_files = stab1_full_condor_results.tar.gz
+
+log = logs/stab1_full_transfer_$(Cluster).log
+output = logs/stab1_full_transfer_$(Cluster).out
+error = logs/stab1_full_transfer_$(Cluster).err
+
+request_cpus = 1
+request_memory = 8GB
+request_disk = 20GB
+
+queue
